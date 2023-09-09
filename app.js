@@ -28,32 +28,3 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
-
-// const nodemailer = require("nodemailer");
-// require("dotenv").config();
-
-// const { META_PASSWORD } = process.env;
-
-// const nodemailerConfig = {
-//   host: "smtp.meta.ua",
-//   port: 465, //25, 465, 2525
-//   secure: true,
-//   auth: {
-//     user: "alex.xag@meta.ua",
-//     pass: META_PASSWORD,
-//   },
-// };
-
-// const transport = nodemailer.createTransport(nodemailerConfig);
-
-// const email = {
-//   to: "example@.mail.com",
-//   from: "alex.xag@meta.ua",
-//   subject: "Test email",
-//   html: "<p><strong>Test email</strong> from localhost:3000</p>",
-// };
-
-// transport
-//   .sendMail(email)
-//   .then(() => console.log("Email send success"))
-//   .catch((err) => console.log(err.message));
