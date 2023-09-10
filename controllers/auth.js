@@ -74,7 +74,7 @@ const verifyEmail = async (req, res) => {
   res.status(200).json({ message: "Verification successful" });
 };
 
-const resendVerifyEmail = async (req, res) => {
+const resendVerifyEmail = async (req, res, next) => {
   try {
     const { error } = schemas.emailSchema.validate(req.body);
     if (error) {
@@ -150,7 +150,7 @@ const login = async (req, res, next) => {
   }
 };
 
-const getCurrentUser = async (req, res) => {
+const getCurrentUser = (req, res, next) => {
   try {
     const { email, subscription } = req.user;
     console.log(subscription);
