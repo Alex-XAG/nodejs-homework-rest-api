@@ -150,7 +150,7 @@ const login = async (req, res, next) => {
   }
 };
 
-const getCurrentUser = async (req, res) => {
+const getCurrentUser = (req, res, next) => {
   try {
     const { email, subscription } = req.user;
     console.log(subscription);
